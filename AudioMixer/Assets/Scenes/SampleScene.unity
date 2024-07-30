@@ -267,6 +267,7 @@ GameObject:
   m_Component:
   - component: {fileID: 90211892}
   - component: {fileID: 90211891}
+  - component: {fileID: 90211893}
   m_Layer: 0
   m_Name: Sound 3
   m_TagString: Untagged
@@ -385,6 +386,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1149265910}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &90211893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 90211890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c8980064b77c8d4c8d4850af7af5795, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audioSource: {fileID: 90211891}
 --- !u!1 &200856529
 GameObject:
   m_ObjectHideFlags: 0
@@ -851,6 +865,7 @@ GameObject:
   - component: {fileID: 416154834}
   - component: {fileID: 416154833}
   - component: {fileID: 416154835}
+  - component: {fileID: 416154836}
   m_Layer: 5
   m_Name: off/on
   m_TagString: Untagged
@@ -960,8 +975,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 545519805}
-        m_TargetAssemblyTypeName: Sound, Assembly-CSharp
+      - m_Target: {fileID: 416154836}
+        m_TargetAssemblyTypeName: TongleSound, Assembly-CSharp
         m_MethodName: ToggleSound
         m_Mode: 1
         m_Arguments:
@@ -972,6 +987,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &416154836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 416154831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a23a8c5972865844a1e30e097630114, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _textOnOff: {fileID: 1923176821}
 --- !u!1 &445548799
 GameObject:
   m_ObjectHideFlags: 0
@@ -1131,12 +1159,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a23a8c5972865844a1e30e097630114, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _audioMixer: {fileID: 24100000, guid: d6cafade5ee696445b9afa66d4e9382e, type: 2}
-  _button1Sound: {fileID: 1293096926}
-  _button2Sound: {fileID: 1835008558}
-  _button3Sound: {fileID: 90211891}
-  _backgroundMusic: {fileID: 1207150908}
-  _soundToggleButton: {fileID: 416154835}
   _textOnOff: {fileID: 1923176821}
 --- !u!4 &545519806
 Transform:
@@ -1631,9 +1653,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 545519805}
-        m_TargetAssemblyTypeName: Sound, Assembly-CSharp
-        m_MethodName: PlayButton3Sound
+      - m_Target: {fileID: 90211893}
+        m_TargetAssemblyTypeName: SoundButton, Assembly-CSharp
+        m_MethodName: PlaySound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2229,9 +2251,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 545519805}
-        m_TargetAssemblyTypeName: Sound, Assembly-CSharp
-        m_MethodName: PlayButton1Sound
+      - m_Target: {fileID: 1293096928}
+        m_TargetAssemblyTypeName: SoundButton, Assembly-CSharp
+        m_MethodName: PlaySound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2598,6 +2620,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1293096927}
   - component: {fileID: 1293096926}
+  - component: {fileID: 1293096928}
   m_Layer: 0
   m_Name: Sound 1
   m_TagString: Untagged
@@ -2716,6 +2739,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1149265910}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1293096928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293096925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c8980064b77c8d4c8d4850af7af5795, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audioSource: {fileID: 1293096926}
 --- !u!1 &1363317078
 GameObject:
   m_ObjectHideFlags: 0
@@ -2726,6 +2762,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1363317079}
   - component: {fileID: 1363317080}
+  - component: {fileID: 1363317081}
   m_Layer: 5
   m_Name: MasterVolume
   m_TagString: Untagged
@@ -2806,9 +2843,9 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 545519805}
-        m_TargetAssemblyTypeName: Sound, Assembly-CSharp
-        m_MethodName: SetMasterVolum
+      - m_Target: {fileID: 1363317081}
+        m_TargetAssemblyTypeName: "Volume\u0421hangerAudioMixer, Assembly-CSharp"
+        m_MethodName: ChangeVolume
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2818,6 +2855,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1363317081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1363317078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ecaebbab35ce1e439a00f283c3a8c3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nameGroupAudioMixer: MasterVolume
+  _audioMixer: {fileID: 24100000, guid: d6cafade5ee696445b9afa66d4e9382e, type: 2}
 --- !u!1 &1581426800
 GameObject:
   m_ObjectHideFlags: 0
@@ -3036,9 +3087,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 545519805}
-        m_TargetAssemblyTypeName: Sound, Assembly-CSharp
-        m_MethodName: PlayButton2Sound
+      - m_Target: {fileID: 1835008560}
+        m_TargetAssemblyTypeName: SoundButton, Assembly-CSharp
+        m_MethodName: PlaySound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3096,6 +3147,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1649122684}
   - component: {fileID: 1649122685}
+  - component: {fileID: 1649122686}
   m_Layer: 5
   m_Name: ButtonsVolume
   m_TagString: Untagged
@@ -3176,9 +3228,9 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 545519805}
-        m_TargetAssemblyTypeName: Sound, Assembly-CSharp
-        m_MethodName: SetButtonVolum
+      - m_Target: {fileID: 1649122686}
+        m_TargetAssemblyTypeName: "Volume\u0421hangerAudioMixer, Assembly-CSharp"
+        m_MethodName: ChangeVolume
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3188,6 +3240,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1649122686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1649122683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ecaebbab35ce1e439a00f283c3a8c3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nameGroupAudioMixer: ButtonsVolume
+  _audioMixer: {fileID: 24100000, guid: d6cafade5ee696445b9afa66d4e9382e, type: 2}
 --- !u!1 &1653906804
 GameObject:
   m_ObjectHideFlags: 0
@@ -3311,6 +3377,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1835008559}
   - component: {fileID: 1835008558}
+  - component: {fileID: 1835008560}
   m_Layer: 0
   m_Name: Sound 2
   m_TagString: Untagged
@@ -3429,6 +3496,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1149265910}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1835008560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1835008557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c8980064b77c8d4c8d4850af7af5795, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audioSource: {fileID: 1835008558}
 --- !u!1 &1848774078
 GameObject:
   m_ObjectHideFlags: 0
@@ -3439,6 +3519,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1848774079}
   - component: {fileID: 1848774080}
+  - component: {fileID: 1848774081}
   m_Layer: 5
   m_Name: MusicVolume
   m_TagString: Untagged
@@ -3519,9 +3600,9 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 545519805}
-        m_TargetAssemblyTypeName: Sound, Assembly-CSharp
-        m_MethodName: SetMusicVolum
+      - m_Target: {fileID: 1848774081}
+        m_TargetAssemblyTypeName: "Volume\u0421hangerAudioMixer, Assembly-CSharp"
+        m_MethodName: ChangeVolume
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3531,6 +3612,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1848774081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1848774078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ecaebbab35ce1e439a00f283c3a8c3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nameGroupAudioMixer: MusicVolume
+  _audioMixer: {fileID: 24100000, guid: d6cafade5ee696445b9afa66d4e9382e, type: 2}
 --- !u!1 &1918236575
 GameObject:
   m_ObjectHideFlags: 0
