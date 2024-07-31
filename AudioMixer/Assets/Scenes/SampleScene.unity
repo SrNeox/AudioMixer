@@ -999,6 +999,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a23a8c5972865844a1e30e097630114, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _audioMixer: {fileID: 24100000, guid: d6cafade5ee696445b9afa66d4e9382e, type: 2}
   _textOnOff: {fileID: 1923176821}
 --- !u!1 &445548799
 GameObject:
@@ -1141,7 +1142,7 @@ GameObject:
   - component: {fileID: 545519806}
   - component: {fileID: 545519805}
   m_Layer: 0
-  m_Name: AudioManager
+  m_Name: AudioController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1159,6 +1160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a23a8c5972865844a1e30e097630114, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _audioMixer: {fileID: 24100000, guid: d6cafade5ee696445b9afa66d4e9382e, type: 2}
   _textOnOff: {fileID: 1923176821}
 --- !u!4 &545519806
 Transform:
@@ -2867,8 +2869,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ecaebbab35ce1e439a00f283c3a8c3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _nameGroupAudioMixer: MasterVolume
   _audioMixer: {fileID: 24100000, guid: d6cafade5ee696445b9afa66d4e9382e, type: 2}
+  _tongleSound: {fileID: 545519805}
 --- !u!1 &1581426800
 GameObject:
   m_ObjectHideFlags: 0
@@ -3252,8 +3254,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ecaebbab35ce1e439a00f283c3a8c3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _nameGroupAudioMixer: ButtonsVolume
   _audioMixer: {fileID: 24100000, guid: d6cafade5ee696445b9afa66d4e9382e, type: 2}
+  _tongleSound: {fileID: 545519805}
 --- !u!1 &1653906804
 GameObject:
   m_ObjectHideFlags: 0
@@ -3624,8 +3626,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ecaebbab35ce1e439a00f283c3a8c3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _nameGroupAudioMixer: MusicVolume
   _audioMixer: {fileID: 24100000, guid: d6cafade5ee696445b9afa66d4e9382e, type: 2}
+  _tongleSound: {fileID: 545519805}
 --- !u!1 &1918236575
 GameObject:
   m_ObjectHideFlags: 0
