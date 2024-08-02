@@ -1,42 +1,25 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.UI;
 
-public class VolumeСhangerAudioMixer : MonoBehaviour
+public class VolumeChangerAudioMixer : MonoBehaviour
 {
     [SerializeField] private AudioMixer _audioMixer;
-    [SerializeField] private TongleSound _tongleSound;
+    [SerializeField] private ToggleSound _toggleSound;
 
-    private string _groupMasterVolume = "MasterVolume";
-    private string _groupButtonsVolume = "ButtonsVolume";
-    private string _groupMusicVolume = "MusicVolume";
+    private const float MinValue = 0.0001f;
+    private const float DecibelConversion = 20f;
 
-    private float _minValue = 0.0001f;
-    private float _decibelConversion = 20f;
-
-    public void ChangeMasterVolume(float volume)
+    public void ChangeVolume(Slider slider)
     {
-        if (_tongleSound._isSoundOn != false)
+        if (_toggleSound.IsSoundOn)
         {
-            volume = Mathf.Max(volume, _minValue);
-            _audioMixer.SetFloat(_groupMasterVolume, Mathf.Log10(volume) * _decibelConversion);
-        }
-    }
+            float volume = Mathf.Max(slider.value, MinValue);
+            string volumeGroup = slider.name;
 
-    public void ChangeButtonsVolume(float volume)
-    {
-        if (_tongleSound._isSoundOn != false)
-        {
-            volume = Mathf.Max(volume, _minValue);
-            _audioMixer.SetFloat(_groupButtonsVolume, Mathf.Log10(volume) * _decibelConversion);
-        }
-    }
-
-    public void ChangeMusicVolume(float volume)
-    {
-        if (_tongleSound._isSoundOn != false)
-        {
-            volume = Mathf.Max(volume, _minValue);
-            _audioMixer.SetFloat(_groupMusicVolume, Mathf.Log10(volume) * _decibelConversion);
+            Debug.Log(slider.name);
+            _audioMixer.SetFloat(volumeGroup, Mathf.Log10(volume) * DecibelConversion);
         }
     }
 }

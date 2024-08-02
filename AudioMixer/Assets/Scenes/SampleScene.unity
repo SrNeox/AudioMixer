@@ -867,7 +867,7 @@ GameObject:
   - component: {fileID: 416154835}
   - component: {fileID: 416154836}
   m_Layer: 5
-  m_Name: off/on
+  m_Name: ToggleSound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -996,11 +996,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 416154831}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a23a8c5972865844a1e30e097630114, type: 3}
+  m_Script: {fileID: 11500000, guid: 9896c0275f5e0ec46b1e37b963498baa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _audioMixer: {fileID: 24100000, guid: d6cafade5ee696445b9afa66d4e9382e, type: 2}
   _textOnOff: {fileID: 1923176821}
+  _sliderMasterVolume: {fileID: 1363317080}
 --- !u!1 &445548799
 GameObject:
   m_ObjectHideFlags: 0
@@ -1162,6 +1163,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _audioMixer: {fileID: 24100000, guid: d6cafade5ee696445b9afa66d4e9382e, type: 2}
   _textOnOff: {fileID: 1923176821}
+  <_isSoundOn>k__BackingField: 0
 --- !u!4 &545519806
 Transform:
   m_ObjectHideFlags: 0
@@ -2846,12 +2848,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1363317081}
-        m_TargetAssemblyTypeName: "Volume\u0421hangerAudioMixer, Assembly-CSharp"
+        m_TargetAssemblyTypeName: VolumeChangerAudioMixer, Assembly-CSharp
         m_MethodName: ChangeVolume
-        m_Mode: 0
+        m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Slider, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2870,7 +2872,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audioMixer: {fileID: 24100000, guid: d6cafade5ee696445b9afa66d4e9382e, type: 2}
-  _tongleSound: {fileID: 545519805}
+  _toggleSound: {fileID: 416154836}
 --- !u!1 &1581426800
 GameObject:
   m_ObjectHideFlags: 0
@@ -3231,12 +3233,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1649122686}
-        m_TargetAssemblyTypeName: "Volume\u0421hangerAudioMixer, Assembly-CSharp"
+        m_TargetAssemblyTypeName: VolumeChangerAudioMixer, Assembly-CSharp
         m_MethodName: ChangeVolume
-        m_Mode: 0
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1649122685}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Slider, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3255,7 +3257,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audioMixer: {fileID: 24100000, guid: d6cafade5ee696445b9afa66d4e9382e, type: 2}
-  _tongleSound: {fileID: 545519805}
+  _toggleSound: {fileID: 416154836}
 --- !u!1 &1653906804
 GameObject:
   m_ObjectHideFlags: 0
@@ -3603,12 +3605,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1848774081}
-        m_TargetAssemblyTypeName: "Volume\u0421hangerAudioMixer, Assembly-CSharp"
+        m_TargetAssemblyTypeName: VolumeChangerAudioMixer, Assembly-CSharp
         m_MethodName: ChangeVolume
-        m_Mode: 0
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1848774080}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Slider, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3627,7 +3629,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audioMixer: {fileID: 24100000, guid: d6cafade5ee696445b9afa66d4e9382e, type: 2}
-  _tongleSound: {fileID: 545519805}
+  _toggleSound: {fileID: 416154836}
 --- !u!1 &1918236575
 GameObject:
   m_ObjectHideFlags: 0
